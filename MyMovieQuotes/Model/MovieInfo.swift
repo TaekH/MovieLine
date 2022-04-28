@@ -9,20 +9,17 @@ import Foundation
 import SwiftUI
 
 struct MovieInfo: Hashable, Codable, Identifiable {
+    
     var title: String
     var cast: String
     var director: String
     var quote: String
-    
-    private var posterName: String //이미지 이름을 읽어올 imageName 속성
-    var poster: Image {//이미지 로드
-        Image(posterName)
-    }
-    
+    var posterName: String //이미지 이름을 읽어올 imageName 속성
     var trailer: String
-    var starrating: Float
+    var starrating: String
     var release: Int
     var id: Int
+    
 }
 
 

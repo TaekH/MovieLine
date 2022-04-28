@@ -1,120 +1,112 @@
-//
-//  Movies.json
-//  MyMovieQuotes
-//
-//  Created by 한택환 on 2022/04/28.
-//
-//MARK: 영화정보 더미데이터
-
 [
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainposter"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 1
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 1,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 2
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 2,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 3
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 3,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 4
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 4,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 5
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 5,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 6
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 6,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 7
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 7,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 8
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 8,
     },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
-        "id": 9
-    }
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
+        "id": 9,
+    },
     {
         "title": "begin again",
-        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트"
-        "director": "존 카니"
-        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까."
-        "poster": "beginagainPoster"
-        "trailer":" "
-        "starrating": 5
-        "release": 2014
+        "cast": "마크 러팔로, 키이라 나이틀리, 헤일리 스테인펠트",
+        "director": "존 카니",
+        "quote": "이래서 음악이 좋아\n모든 평범함도 음악을 듣는 순간\n빛나는 진주처럼 변하니까.",
+        "posterName": "beginagainposter",
+        "trailer": " ",
+        "starrating": "5",
+        "release": 2014,
         "id": 10
     }
 ]
