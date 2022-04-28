@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct MyMemoji: View {
+    var image = Image("myMemoji")
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        image
+            .background(Color("dividerColor"))
+            .clipShape(Circle())
+            
     }
 }
 
