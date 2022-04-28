@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct MoviePoster: View {
+    var moviePoster: MovieInfo
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(moviePoster.posterName)
+            .aspectRatio(contentMode: .fit)
+            .cornerRadius(10)
     }
 }
 
 struct MoviePoster_Previews: PreviewProvider {
     static var previews: some View {
-        MoviePoster()
+        MoviePoster(moviePoster: movieInfo[0])
     }
 }
