@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32609E281A8C4600B09A6B /* ModelData.swift */; };
+		2A3260A1281A8C8A00B09A6B /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3260A0281A8C8A00B09A6B /* MovieInfo.swift */; };
 		2A561891281A7CDF003A3288 /* MyMovieQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */; };
 		2A561893281A7CDF003A3288 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A561892281A7CDF003A3288 /* ContentView.swift */; };
 		2A561895281A7CE0003A3288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A561894281A7CE0003A3288 /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 		2A5618C9281A7DFA003A3288 /* MyMemoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618C8281A7DFA003A3288 /* MyMemoji.swift */; };
 		2A5618CC281A7E12003A3288 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618CB281A7E12003A3288 /* MoviePoster.swift */; };
 		2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */; };
+		2A5618D3281A899D003A3288 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A5618D2281A899D003A3288 /* Movies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A32609E281A8C4600B09A6B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		2A3260A0281A8C8A00B09A6B /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		2A56188D281A7CDF003A3288 /* MyMovieQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMovieQuotesApp.swift; sourceTree = "<group>"; };
 		2A561892281A7CDF003A3288 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		2A5618C8281A7DFA003A3288 /* MyMemoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMemoji.swift; sourceTree = "<group>"; };
 		2A5618CB281A7E12003A3288 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotePoster.swift; sourceTree = "<group>"; };
+		2A5618D2281A899D003A3288 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A32609B281A8C0B00B09A6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A32609E281A8C4600B09A6B /* ModelData.swift */,
+				2A3260A0281A8C8A00B09A6B /* MovieInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2A561884281A7CDF003A3288 = {
 			isa = PBXGroup;
 			children = (
-				2A5618BD281A7D13003A3288 /* Views */,
-				2A5618BC281A7CFE003A3288 /* Resources */,
-				2A5618BA281A7CE9003A3288 /* Helpers */,
 				2A56188F281A7CDF003A3288 /* MyMovieQuotes */,
+				2A5618BD281A7D13003A3288 /* Views */,
+				2A5618BA281A7CE9003A3288 /* Helpers */,
+				2A5618BC281A7CFE003A3288 /* Resources */,
+				2A32609B281A8C0B00B09A6B /* Model */,
 				2A5618A0281A7CE0003A3288 /* MyMovieQuotesTests */,
 				2A5618AA281A7CE0003A3288 /* MyMovieQuotesUITests */,
 				2A56188E281A7CDF003A3288 /* Products */,
@@ -154,6 +170,7 @@
 		2A5618BC281A7CFE003A3288 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A5618D2281A899D003A3288 /* Movies.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,6 +316,7 @@
 			files = (
 				2A561898281A7CE0003A3288 /* Preview Assets.xcassets in Resources */,
 				2A561895281A7CE0003A3288 /* Assets.xcassets in Resources */,
+				2A5618D3281A899D003A3288 /* Movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +343,11 @@
 			files = (
 				2A561893281A7CDF003A3288 /* ContentView.swift in Sources */,
 				2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */,
+				2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */,
 				2A5618C5281A7D59003A3288 /* MovieReview.swift in Sources */,
 				2A5618C9281A7DFA003A3288 /* MyMemoji.swift in Sources */,
 				2A5618C1281A7D43003A3288 /* MovieQuote.swift in Sources */,
+				2A3260A1281A8C8A00B09A6B /* MovieInfo.swift in Sources */,
 				2A5618CC281A7E12003A3288 /* MoviePoster.swift in Sources */,
 				2A5618C3281A7D4D003A3288 /* MovieList.swift in Sources */,
 				2A561891281A7CDF003A3288 /* MyMovieQuotesApp.swift in Sources */,
