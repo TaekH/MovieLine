@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MovieList: View {
     var body: some View {
-        Color.gray
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
