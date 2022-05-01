@@ -23,6 +23,7 @@
 		2A5618CC281A7E12003A3288 /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618CB281A7E12003A3288 /* MoviePoster.swift */; };
 		2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */; };
 		2A5618D3281A899D003A3288 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A5618D2281A899D003A3288 /* Movies.json */; };
+		2A8F9DF5281E496D005A8918 /* MovieQuoteInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F9DF4281E496D005A8918 /* MovieQuoteInList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		2A5618CB281A7E12003A3288 /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotePoster.swift; sourceTree = "<group>"; };
 		2A5618D2281A899D003A3288 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
+		2A8F9DF4281E496D005A8918 /* MovieQuoteInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuoteInList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5618C2281A7D4D003A3288 /* MovieList.swift */,
+				2A8F9DF4281E496D005A8918 /* MovieQuoteInList.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */,
 				2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */,
 				2A5618C5281A7D59003A3288 /* MovieReview.swift in Sources */,
+				2A8F9DF5281E496D005A8918 /* MovieQuoteInList.swift in Sources */,
 				2A5618C9281A7DFA003A3288 /* MyMemoji.swift in Sources */,
 				2A5618C1281A7D43003A3288 /* MovieQuote.swift in Sources */,
 				2A3260A1281A8C8A00B09A6B /* MovieInfo.swift in Sources */,

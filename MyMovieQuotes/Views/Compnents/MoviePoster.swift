@@ -9,10 +9,13 @@ import SwiftUI
 
 struct MoviePoster: View {
     var moviePoster: MovieInfo
+    let moviePosterWidth: CGFloat = (UIScreen.main.bounds.width - 60) / 2
     
     var body: some View {
-        Image(moviePoster.posterName)
+        moviePoster.poster
+            .resizable()
             .aspectRatio(contentMode: .fit)
+            .frame(width: moviePosterWidth)
             .cornerRadius(10)
     }
 }
