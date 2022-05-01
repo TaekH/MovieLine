@@ -14,7 +14,11 @@ struct MovieInfo: Hashable, Codable, Identifiable {
     var cast: String
     var director: String
     var quote: String
-    var posterName: String //이미지 이름을 읽어올 imageName 속성
+    private var posterName: String//이미지 이름을 읽어올 imageName 속성
+    var poster: Image {
+        Image(posterName)
+    }
+    
     var trailer: String
     var starrating: String
     var release: Int

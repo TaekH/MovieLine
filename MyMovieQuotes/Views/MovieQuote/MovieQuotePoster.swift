@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct MovieQuotePoste: View {
-    var movieinfo: MovieInfo
+    var movieInfo: MovieInfo
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
     
     
-    
     var body: some View {
         ZStack() {
-            Image(movieinfo.posterName)
+            movieInfo.poster
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 15)
@@ -30,7 +29,7 @@ struct MovieQuotePoste: View {
             
             
             GeometryReader { g in
-                    Text(movieinfo.quote)
+                    Text(movieInfo.quote)
                         .font(.system(size: 20))
                         .foregroundColor(.white)
                         .fontWeight(.bold)
@@ -40,7 +39,7 @@ struct MovieQuotePoste: View {
                     HStack(spacing: 0) {
                         Group{
                             Image(systemName: "star.fill")
-                            Text(movieinfo.starrating)
+                            Text(movieInfo.starrating)
                         }
                         .font(.system(size: 20))
                         .foregroundColor(Color("starRatingColor"))
@@ -65,6 +64,6 @@ struct MovieQuotePoste: View {
 
 struct MovieQuotePoste_Previews: PreviewProvider {
     static var previews: some View {
-        MovieQuotePoste(movieinfo: movieInfo[0])
+        MovieQuotePoste(movieInfo: movieInfo[0])
     }
 }

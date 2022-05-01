@@ -12,7 +12,7 @@ struct MovieQuote: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                MovieQuotePoste(movieinfo: movieInfo[0])
+                MovieQuotePoste(movieInfo: movieInfo[0])
                 
                 Text("다른 콘텐츠")
                     .font(.system(size: 15))
