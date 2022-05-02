@@ -12,7 +12,7 @@ struct MovieList: View {
     var moviePoster: [MovieInfo]
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
     //let randomIndex = Int.random(in: 0...9)
-    
+    @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
     //let randomIndex = [0,1,2,3,4,5,6,7,8,9]
     //let posters = [MoviePoster(moviePoster: movieInfo[0]), MovieQuoteInList(moviePoster: movieInfo[0])]
     var body: some View {
@@ -23,7 +23,7 @@ struct MovieList: View {
                     
                     
                     HStack(alignment: .top, spacing: 0) {
-                        let randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
+                        
                         LazyVStack(spacing: 0) {
                             
                             ForEach(0..<5) {index in
