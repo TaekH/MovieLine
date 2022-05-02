@@ -24,6 +24,7 @@
 		2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */; };
 		2A5618D3281A899D003A3288 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A5618D2281A899D003A3288 /* Movies.json */; };
 		2A8F9DF5281E496D005A8918 /* MovieQuoteInList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F9DF4281E496D005A8918 /* MovieQuoteInList.swift */; };
+		2A8F9DF8281E7C01005A8918 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F9DF7281E7C01005A8918 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		2A5618CF281A7E54003A3288 /* MovieQuotePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotePoster.swift; sourceTree = "<group>"; };
 		2A5618D2281A899D003A3288 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		2A8F9DF4281E496D005A8918 /* MovieQuoteInList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuoteInList.swift; sourceTree = "<group>"; };
+		2A8F9DF7281E7C01005A8918 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		2A56188F281A7CDF003A3288 /* MyMovieQuotes */ = {
 			isa = PBXGroup;
 			children = (
+				2A8F9DF6281E7BF4005A8918 /* Extension */,
 				2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */,
 				2A561892281A7CDF003A3288 /* ContentView.swift */,
 				2A561894281A7CE0003A3288 /* Assets.xcassets */,
@@ -211,6 +214,14 @@
 				2A5618C4281A7D59003A3288 /* MovieReview.swift */,
 			);
 			path = MovieReview;
+			sourceTree = "<group>";
+		};
+		2A8F9DF6281E7BF4005A8918 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2A8F9DF7281E7C01005A8918 /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				2A561893281A7CDF003A3288 /* ContentView.swift in Sources */,
 				2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */,
 				2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */,
+				2A8F9DF8281E7C01005A8918 /* Extension.swift in Sources */,
 				2A5618C5281A7D59003A3288 /* MovieReview.swift in Sources */,
 				2A8F9DF5281E496D005A8918 /* MovieQuoteInList.swift in Sources */,
 				2A5618C9281A7DFA003A3288 /* MyMemoji.swift in Sources */,
