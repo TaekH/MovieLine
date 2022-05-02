@@ -49,7 +49,6 @@ struct MovieQuotePoste: View {
                     self.isPresented.toggle()
                 } label: {
                     Text("더보기")
-                    Image(systemName: "chevron.down")
                 }.foregroundColor(Color("informationColor"))
                     .font(.system(size: 20))
                     .padding(15)
