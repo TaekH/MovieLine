@@ -18,7 +18,7 @@ struct MovieQuotePoste: View {
             movieInfo.poster
                 .resizable()
                 .scaledToFill()
-                .blur(radius: 15)
+                .blur(radius: 15, opaque: true)
                 .frame(width: width, height: height)
                 .clipped()
             

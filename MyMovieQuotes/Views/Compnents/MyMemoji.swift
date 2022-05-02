@@ -12,8 +12,12 @@ struct MyMemoji: View {
     
     var body: some View {
         image
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 40, height: 40)
             .background(Color("dividerColor"))
             .clipShape(Circle())
+            
             
     }
 }
