@@ -9,19 +9,21 @@ import SwiftUI
 
 struct MoviePoster: View {
     var moviePoster: MovieInfo
-    let moviePosterWidth: CGFloat = (UIScreen.main.bounds.width - 60) / 2
+    var posterWidth: CGFloat
+    var posterHeight: CGFloat
     
     var body: some View {
         moviePoster.poster
             .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: moviePosterWidth)
+            .aspectRatio(contentMode: .fill)
+            .frame(width: posterWidth, height: posterHeight)
+            .clipped()
             .cornerRadius(10)
     }
 }
 
-struct MoviePoster_Previews: PreviewProvider {
-    static var previews: some View {
-        MoviePoster(moviePoster: movieInfo[0])
-    }
-}
+//struct MoviePoster_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MoviePoster(moviePoster: movieInfo[0], posterWidth: , posterHeight: )
+//    }
+//}

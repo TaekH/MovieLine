@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct MovieQuote: View {
+    let posterWidth = UIScreen.main.bounds.width / 2.85
+    let posterHeight = UIScreen.main.bounds.height / 4.13
+    @State var currentIndex: Int = 0
+    
+    //MARK: 현재시각
+    var dateFormatter: DateFormatter {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter
+        }
+    @State var currentDate = Date()
     
     var body: some View {
+        //let randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                MovieQuotePoste(movieInfo: movieInfo[0])
+                MovieQuotePoste(movieInfo: movieInfo[currentIndex])
                 
                 Text("다른 콘텐츠")
                     .font(.system(size: 15))
@@ -22,8 +34,16 @@ struct MovieQuote: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 0) {
                         ForEach(0..<10) { index in
-                            MoviePoster(moviePoster: movieInfo[index])
+                            MoviePoster(moviePoster: movieInfo[index], posterWidth: posterWidth, posterHeight: posterHeight)
                                 .padding(.trailing, 10)
+                                .gesture(
+                                TapGesture()
+                                    .onEnded{
+
+                                        currentIndex = index
+                                    
+                                    }
+                                )
                         }
                     }
                     .padding(.leading, 10)
@@ -31,8 +51,16 @@ struct MovieQuote: View {
                 Spacer()
             }
             .edgesIgnoringSafeArea(.all)
-            .navigationTitle("영화")
-            .navigationBarTitleDisplayMode(.large)
+            .navigationBarItems(leading: VStack(alignment: .leading){
+                Text("\(currentDate, formatter: dateFormatter)")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 13))
+                Text("영화")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .font(.system(size: 35))
+            }, trailing: MyMemoji())
         }
     }
 }
