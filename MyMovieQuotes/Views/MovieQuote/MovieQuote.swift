@@ -11,6 +11,7 @@ struct MovieQuote: View {
     let posterWidth = UIScreen.main.bounds.width / 2.85
     let posterHeight = UIScreen.main.bounds.height / 4.13
     @State var currentIndex: Int = 0
+    @State var isPresented = false
     
     //MARK: 현재시각
     var dateFormatter: DateFormatter {
@@ -24,8 +25,8 @@ struct MovieQuote: View {
         //let randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                MovieQuotePoste(movieInfo: movieInfo[currentIndex])
-                
+                MovieQuotePoste(movieInfo: movieInfo[currentIndex], isPresented: $isPresented)
+                    
                 Text("다른 콘텐츠")
                     .font(.system(size: 15))
                     .fontWeight(.bold)
@@ -61,6 +62,9 @@ struct MovieQuote: View {
                     .fontWeight(.bold)
                     .font(.system(size: 35))
             }, trailing: MyMemoji())
+            .sheet(isPresented: $isPresented) {
+                MovieReview(movieInfo: movieInfo[currentIndex], isPresented: $isPresented)
+            }
         }
     }
 }
