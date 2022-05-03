@@ -13,7 +13,6 @@ struct MovieQuoteInList: View {
     var posterWidth: CGFloat
     var posterHeight: CGFloat
     
-    
     var body: some View {
         ZStack {
             moviePoster.poster

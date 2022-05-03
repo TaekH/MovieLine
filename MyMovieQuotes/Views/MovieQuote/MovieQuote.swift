@@ -25,7 +25,7 @@ struct MovieQuote: View {
         //let randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                MovieQuotePoste(movieInfo: movieInfo[currentIndex], isPresented: $isPresented)
+                MovieQuotePoste(movieInfo: movieInfo[currentIndex], isPresented: isPresented)
                     
                 Text("다른 콘텐츠")
                     .font(.system(size: 15))
@@ -54,17 +54,14 @@ struct MovieQuote: View {
             .edgesIgnoringSafeArea(.all)
             .navigationBarItems(leading: VStack(alignment: .leading){
                 Text("\(currentDate, formatter: dateFormatter)")
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("dividerColor"))
                     .fontWeight(.bold)
                     .font(.system(size: 13))
                 Text("영화")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .font(.system(size: 35))
-            }, trailing: MyMemoji())
-            .sheet(isPresented: $isPresented) {
-                MovieReview(movieInfo: movieInfo[currentIndex], isPresented: $isPresented)
-            }
+            }.padding(.top, 50), trailing: MyMemoji().padding(.top, 50))
         }
     }
 }

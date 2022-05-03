@@ -10,8 +10,8 @@ import SwiftUI
 struct MovieReview: View {
     
     var movieInfo: MovieInfo
-    @Binding var isPresented: Bool
-    
+    @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -65,19 +65,20 @@ struct MovieReview: View {
                     
                     Divider()
                     
-                    Text("감상평")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                    Text("adfs\n\n\n\n\n\n\n")
+//                    Text("감상평")
+//                        .font(.system(size: 20))
+//                        .fontWeight(.bold)
+//                    Text("adfs\n\n\n\n\n\n\n")
                     Spacer()
                 }
             }.edgesIgnoringSafeArea(.all)
                 .navigationBarItems(leading: Text(movieInfo.title)
                     .fontWeight(.bold)
                     .font(.system(size: 35))
+                    .allowsTightening(true)
                     .foregroundColor(.white), trailing:
                                         Button {
-                    self.isPresented.toggle()
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "xmark.circle.fill")
                 }
@@ -86,11 +87,12 @@ struct MovieReview: View {
                 )
             
         }
+        
     }
 }
 
 struct MovieReview_Previews: PreviewProvider {
     static var previews: some View {
-        MovieReview(movieInfo: movieInfo[0], isPresented: .constant(true))
+        MovieReview(movieInfo: movieInfo[0])
     }
 }

@@ -12,7 +12,7 @@ struct MovieQuotePoste: View {
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
     
-    @Binding var isPresented: Bool
+    @State var isPresented = false
     
     var body: some View {
         ZStack() {
@@ -46,14 +46,17 @@ struct MovieQuotePoste: View {
                 
                 //MARK: 더보기 버튼
                 Button {
-                    self.isPresented.toggle()
+                    isPresented.toggle()
                 } label: {
                     Text("더보기")
                 }.foregroundColor(Color("informationColor"))
                     .font(.system(size: 20))
                     .padding(15)
                     .frame(width: g.size.width, height: g.size.height,  alignment: .bottom)
-
+                    .fullScreenCover(isPresented: $isPresented) {
+                        MovieReview(movieInfo: movieInfo)
+                    }
+                
             }
             .frame(height: height)
         }
@@ -63,6 +66,6 @@ struct MovieQuotePoste: View {
 
 struct MovieQuotePoste_Previews: PreviewProvider {
     static var previews: some View {
-        MovieQuotePoste(movieInfo: movieInfo[0], isPresented: .constant(true))
+        MovieQuotePoste(movieInfo: movieInfo[0], isPresented: false)
     }
 }
