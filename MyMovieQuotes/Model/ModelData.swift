@@ -9,7 +9,9 @@
 import Foundation
 import Combine
 
-var movieInfo :[MovieInfo] = load("Movies.json")
+    var movieInfo :[MovieInfo] = load("Movies.json")
+
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
