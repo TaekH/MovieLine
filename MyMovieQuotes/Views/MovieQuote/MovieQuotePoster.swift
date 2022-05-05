@@ -35,6 +35,7 @@ struct MovieQuotePoste: View {
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
+                    .lineSpacing(10)
                     .frame(width: g.size.width, height: g.size.height)
                 
                 //MARK: StarRating
@@ -49,7 +50,12 @@ struct MovieQuotePoste: View {
                     isPresented.toggle()
                 } label: {
                     Text("영화 정보")
-                }.foregroundColor(Color("informationColor"))
+                        .fontWeight(.bold)
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color("customBlueColor"), lineWidth: 2)
+                            .frame(width: 100, height: 30, alignment: .center)
+                        )
+                }.foregroundColor(Color("customBlueColor"))
                     .font(.system(size: 20))
                     .padding(15)
                     .frame(width: g.size.width, height: g.size.height,  alignment: .bottom)

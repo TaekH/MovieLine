@@ -54,7 +54,7 @@ struct MovieQuote: View {
             .edgesIgnoringSafeArea(.all)
             .navigationBarItems(leading: VStack(alignment: .leading){
                 Text("\(currentDate, formatter: dateFormatter)")
-                    .foregroundColor(Color("dividerColor"))
+                    .foregroundColor(Color("customLightGrayColor"))
                     .fontWeight(.bold)
                     .font(.system(size: 13))
                 Text("영화")
