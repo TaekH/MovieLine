@@ -15,7 +15,7 @@ struct MovieQuotePoste: View {
     @State var isPresented = false
     
     var body: some View {
-        ZStack() {
+        ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             movieInfo.poster
                 .resizable()
                 .scaledToFill()
@@ -38,7 +38,7 @@ struct MovieQuotePoste: View {
                     .frame(width: g.size.width, height: g.size.height)
                 
                 //MARK: StarRating
-                Label(movieInfo.starrating, systemImage: "star.fill")
+                Label(String(movieInfo.starrating), systemImage: "star.fill")
                     .font(.system(size: 20))
                     .foregroundColor(Color("starRatingColor"))
                     .padding(.all, 15)
@@ -48,7 +48,7 @@ struct MovieQuotePoste: View {
                 Button {
                     isPresented.toggle()
                 } label: {
-                    Text("더보기")
+                    Text("영화 정보")
                 }.foregroundColor(Color("informationColor"))
                     .font(.system(size: 20))
                     .padding(15)
