@@ -24,12 +24,12 @@ struct MovieQuoteInList: View {
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .opacity(0.3)
+                        .opacity(0.2)
                 )
             Text(moviePoster.quote)
                 .foregroundColor(.white)
                 .fontWeight(.bold)
-                .font(.system(size: 13))
+                .font(.system(size: 15))
                 .frame(width: posterWidth, height: posterHeight)
 
                 
