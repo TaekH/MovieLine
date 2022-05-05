@@ -11,7 +11,7 @@ struct MovieList: View {
     
     var moviePoster: [MovieInfo]
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
-    let posterHeight = UIScreen.main.bounds.height / 4.13
+    var posterHeight: CGFloat { posterWidth * 1.5 }
     
     @State var isPresented = false
     @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
