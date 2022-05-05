@@ -13,7 +13,7 @@ struct MovieQuote: View {
     @State var currentIndex: Int = 0
     @State var isPresented = false
     
-    //MARK: 현재시각
+    //MARK: 현재시각 포메터
     var dateFormatter: DateFormatter {
             let formatter = DateFormatter()
             formatter.dateStyle = .long
