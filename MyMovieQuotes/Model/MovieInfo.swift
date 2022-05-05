@@ -20,7 +20,7 @@ struct MovieInfo: Hashable, Codable, Identifiable {
     }
     
     var trailer: String
-    var starrating: String
+    var starrating: Double
     var release: Int
     var id: Int
     
