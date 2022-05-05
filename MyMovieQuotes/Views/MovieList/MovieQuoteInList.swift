@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MovieQuoteInList: View {
     
-    var moviePoster: MovieInfo
+    var moviePoster: MovieInfo2
     var posterWidth: CGFloat
     var posterHeight: CGFloat
     
     var body: some View {
         ZStack {
-            moviePoster.poster
+            Image(moviePoster.posterName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .blur(radius: 4)
@@ -26,7 +26,7 @@ struct MovieQuoteInList: View {
                     RoundedRectangle(cornerRadius: 10)
                         .opacity(0.2)
                 )
-            Text(moviePoster.quote)
+            Text(moviePoster.quote[0])
                 .foregroundColor(.white)
                 .fontWeight(.bold)
                 .font(.system(size: 15))

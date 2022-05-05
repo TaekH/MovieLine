@@ -22,7 +22,7 @@ struct ContentView: View {
                     Text("명대사")
                 }
                 .tag(0)
-            MovieList(moviePoster: movieInfo)
+            MovieList(moviePoster: dummyMovie)
                 .tabItem {
                     Image(systemName: "list.and.film")
                     Text("리스트")

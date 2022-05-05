@@ -9,19 +9,21 @@ import SwiftUI
 
 struct MovieList: View {
     
-    var moviePoster: [MovieInfo]
+    var moviePoster: [MovieInfo2]
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
     var posterHeight: CGFloat { posterWidth * 1.5 }
     
     @State var isPresented = false
-    
     @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
+    //[1,3,5,0,..]
+    //@State var selectedIndex: Int
 
     var body: some View {
         var selectedIndex: Int = 0
         
         NavigationView {
             VStack {
+                //Divider()
                 ScrollView {
                     HStack(alignment: .top, spacing: 0) {
                         
@@ -95,6 +97,6 @@ struct MovieList: View {
 
 struct MovieList_Previews: PreviewProvider {
     static var previews: some View {
-        MovieList(moviePoster: movieInfo)
+        MovieList(moviePoster: dummyMovie)
     }
 }

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct MovieQuotePoste: View {
-    var movieInfo: MovieInfo
+    var movieInfo: MovieInfo2
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
-    
+    @State var quoteIndex = 0
     @State var isPresented = false
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
             //MARK: 영화 포스터 데이터
-            movieInfo.poster
+            Image(movieInfo.posterName)
                 .resizable()
                 .scaledToFill()
                 .blur(radius: 15, opaque: true)
@@ -31,7 +31,7 @@ struct MovieQuotePoste: View {
             
             
             GeometryReader { g in
-                Text(movieInfo.quote)
+                Text(movieInfo.quote[0])
                     .font(.system(size: 20))
                     .foregroundColor(.white)
                     .fontWeight(.bold)
@@ -73,6 +73,6 @@ struct MovieQuotePoste: View {
 
 struct MovieQuotePoste_Previews: PreviewProvider {
     static var previews: some View {
-        MovieQuotePoste(movieInfo: movieInfo[0], isPresented: false)
+        MovieQuotePoste(movieInfo: dummyMovie[0], isPresented: false)
     }
 }

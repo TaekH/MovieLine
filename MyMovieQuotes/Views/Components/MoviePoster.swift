@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MoviePoster: View {
-    var moviePoster: MovieInfo
+    var moviePoster: MovieInfo2
     var posterWidth: CGFloat
     var posterHeight: CGFloat
     
     var body: some View {
-        moviePoster.poster
+        Image(moviePoster.posterName)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: posterWidth, height: posterHeight)
