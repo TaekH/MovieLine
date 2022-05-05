@@ -14,16 +14,14 @@ struct MovieList: View {
     var posterHeight: CGFloat { posterWidth * 1.5 }
     
     @State var isPresented = false
+    
     @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
-    //[1,3,5,0,..]
-    //@State var selectedIndex: Int
 
     var body: some View {
         var selectedIndex: Int = 0
         
         NavigationView {
             VStack {
-                //Divider()
                 ScrollView {
                     HStack(alignment: .top, spacing: 0) {
                         

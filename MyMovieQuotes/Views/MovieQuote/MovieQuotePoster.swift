@@ -16,6 +16,7 @@ struct MovieQuotePoste: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .top)) {
+            //MARK: 영화 포스터 데이터
             movieInfo.poster
                 .resizable()
                 .scaledToFill()
