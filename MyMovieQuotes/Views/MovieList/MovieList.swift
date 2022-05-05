@@ -4,24 +4,26 @@
 //
 //  Created by 한택환 on 2022/04/28.
 //
-
+//MARK: 영화 리스트 페이지
 import SwiftUI
 
 struct MovieList: View {
     
     var moviePoster: [MovieInfo]
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
+    let posterHeight = UIScreen.main.bounds.height / 4.13
     
     @State var isPresented = false
     @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
-    @State var selectedIndex = 0
+    //[1,3,5,0,..]
+    //@State var selectedIndex: Int
 
     var body: some View {
-        
+        var selectedIndex: Int = 0
         
         NavigationView {
             VStack {
-                Divider()
+                //Divider()
                 ScrollView {
                     HStack(alignment: .top, spacing: 0) {
                         
@@ -32,27 +34,21 @@ struct MovieList: View {
                                 //randomPosterIndex 가 1이면 그냥 포스터
                                 if randomPosterIndex == 1 {
                                     
-                                    MoviePoster(moviePoster: moviePoster[randomIndex[index]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
+                                    MoviePoster(moviePoster: moviePoster[randomIndex[index]], posterWidth: posterWidth, posterHeight: posterHeight)
                                         .onTapGesture {
                                             withAnimation {
-                                                print(randomIndex[index])
+                                                selectedIndex = index
                                                 isPresented.toggle()
                                             }
-                                        }
-                                        .fullScreenCover(isPresented: $isPresented) {
-                                            MovieReview(movieInfo: moviePoster[randomIndex[index]])
                                         }
                                 }
                                 else {
                                     MovieQuoteInList(moviePoster: moviePoster[randomIndex[index]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
                                         .onTapGesture {
                                             withAnimation {
+                                                selectedIndex = index
                                                 isPresented.toggle()
                                             }
-                                        }
-                                        .fullScreenCover(isPresented: $isPresented) {
-                                            
-                                            MovieReview(movieInfo: moviePoster[randomIndex[index]])
                                         }
                                 }
                                 
@@ -67,39 +63,35 @@ struct MovieList: View {
                                 let randomPosterIndex = Int.random(in: 0...1)
                                 
                                 if randomPosterIndex == 0 {
-                                    MoviePoster(moviePoster: moviePoster[randomIndex[index2]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
+                                    MoviePoster(moviePoster: moviePoster[randomIndex[index2]], posterWidth: posterWidth, posterHeight: posterHeight)
                                         .onTapGesture {
+                                            selectedIndex = index2
                                             withAnimation {
                                                 print(randomIndex[index2])
                                                 isPresented.toggle()
                                             }
-                                        }
-                                        .fullScreenCover(isPresented: $isPresented) {
-                                            MovieReview(movieInfo: moviePoster[randomIndex[index2]])
                                         }
                                 }
                                 else {
                                     MovieQuoteInList(moviePoster: moviePoster[randomIndex[index2]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
                                         .onTapGesture {
                                             withAnimation {
-                                                print(randomIndex[index2])
+                                                selectedIndex = index2
                                                 isPresented.toggle()
                                             }
-                                        }
-                                        .fullScreenCover(isPresented: $isPresented) {
-                                            MovieReview(movieInfo: moviePoster[randomIndex[index2]])
                                         }
                                 }
                             }.padding(.vertical, 10)
                         }
+                    }
+                    .fullScreenCover(isPresented: $isPresented) {
+                        MovieReview(movieInfo: moviePoster[randomIndex[selectedIndex]])
                     }.padding(.horizontal, 10)
                 }
+                
             }
-            .navigationBarItems(leading: Text("영화 리스트").fontWeight(.bold)
-            .font(.system(size: 35)), trailing: MyMemoji())
-            
+            .navigationTitle("영화 리스트")
         }
-        
     }
 }
 
