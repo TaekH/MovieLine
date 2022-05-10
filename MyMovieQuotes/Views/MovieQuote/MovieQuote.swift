@@ -47,14 +47,12 @@ struct MovieQuote: View {
                     HStack(spacing: 0) {
                         
                         ForEach(0..<10) { index in
-                            MoviePoster(moviePoster: dummyMovie[index], posterWidth: posterWidth, posterHeight: posterHeight)
-                                .padding(.trailing, 10)
-                                .gesture(
-                                TapGesture()
-                                    .onEnded{
-                                        currentIndex = index
-                                    }
-                                )
+                            Button {
+                                currentIndex = index
+                            } label: {
+                                MoviePoster(moviePoster: dummyMovie[index], posterWidth: posterWidth, posterHeight: posterHeight)
+                                    .padding(.trailing, 10)
+                            }
                         }
                         
                     }
