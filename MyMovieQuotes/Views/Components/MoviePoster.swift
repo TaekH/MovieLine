@@ -21,9 +21,3 @@ struct MoviePoster: View {
             .cornerRadius(10)
     }
 }
-
-//struct MoviePoster_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MoviePoster(moviePoster: movieInfo[0], posterWidth: , posterHeight: )
-//    }
-//}
