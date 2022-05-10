@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MovieLine: View {
     //탭바 구분선 추가 (ios 15부터 디폴트로 구분선 삭제)
     @State private var selection = 0
     init() {
@@ -32,8 +32,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MovieLine_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MovieLine()
     }
 }

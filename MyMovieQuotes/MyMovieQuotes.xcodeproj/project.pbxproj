@@ -10,7 +10,7 @@
 		2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A32609E281A8C4600B09A6B /* ModelData.swift */; };
 		2A3260A1281A8C8A00B09A6B /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3260A0281A8C8A00B09A6B /* MovieInfo.swift */; };
 		2A561891281A7CDF003A3288 /* MyMovieQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */; };
-		2A561893281A7CDF003A3288 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A561892281A7CDF003A3288 /* ContentView.swift */; };
+		2A561893281A7CDF003A3288 /* MovieLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A561892281A7CDF003A3288 /* MovieLine.swift */; };
 		2A561895281A7CE0003A3288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A561894281A7CE0003A3288 /* Assets.xcassets */; };
 		2A561898281A7CE0003A3288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A561897281A7CE0003A3288 /* Preview Assets.xcassets */; };
 		2A5618A2281A7CE0003A3288 /* MyMovieQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5618A1281A7CE0003A3288 /* MyMovieQuotesTests.swift */; };
@@ -49,9 +49,9 @@
 /* Begin PBXFileReference section */
 		2A32609E281A8C4600B09A6B /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		2A3260A0281A8C8A00B09A6B /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
-		2A56188D281A7CDF003A3288 /* MyMovieQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A56188D281A7CDF003A3288 /* MovieLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMovieQuotesApp.swift; sourceTree = "<group>"; };
-		2A561892281A7CDF003A3288 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A561892281A7CDF003A3288 /* MovieLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLine.swift; sourceTree = "<group>"; };
 		2A561894281A7CE0003A3288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A561897281A7CE0003A3288 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A56189D281A7CE0003A3288 /* MyMovieQuotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMovieQuotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +122,7 @@
 		2A56188E281A7CDF003A3288 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A56188D281A7CDF003A3288 /* MyMovieQuotes.app */,
+				2A56188D281A7CDF003A3288 /* MovieLine.app */,
 				2A56189D281A7CE0003A3288 /* MyMovieQuotesTests.xctest */,
 				2A5618A7281A7CE0003A3288 /* MyMovieQuotesUITests.xctest */,
 			);
@@ -134,7 +134,7 @@
 			children = (
 				2A8F9DF6281E7BF4005A8918 /* Extension */,
 				2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */,
-				2A561892281A7CDF003A3288 /* ContentView.swift */,
+				2A561892281A7CDF003A3288 /* MovieLine.swift */,
 				2A561894281A7CE0003A3288 /* Assets.xcassets */,
 				2A561896281A7CE0003A3288 /* Preview Content */,
 			);
@@ -241,9 +241,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A56188C281A7CDF003A3288 /* MyMovieQuotes */ = {
+		2A56188C281A7CDF003A3288 /* MovieLine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A5618B1281A7CE0003A3288 /* Build configuration list for PBXNativeTarget "MyMovieQuotes" */;
+			buildConfigurationList = 2A5618B1281A7CE0003A3288 /* Build configuration list for PBXNativeTarget "MovieLine" */;
 			buildPhases = (
 				2A561889281A7CDF003A3288 /* Sources */,
 				2A56188A281A7CDF003A3288 /* Frameworks */,
@@ -253,9 +253,9 @@
 			);
 			dependencies = (
 			);
-			name = MyMovieQuotes;
+			name = MovieLine;
 			productName = MyMovieQuotes;
-			productReference = 2A56188D281A7CDF003A3288 /* MyMovieQuotes.app */;
+			productReference = 2A56188D281A7CDF003A3288 /* MovieLine.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2A56189C281A7CE0003A3288 /* MyMovieQuotesTests */ = {
@@ -330,7 +330,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A56188C281A7CDF003A3288 /* MyMovieQuotes */,
+				2A56188C281A7CDF003A3288 /* MovieLine */,
 				2A56189C281A7CE0003A3288 /* MyMovieQuotesTests */,
 				2A5618A6281A7CE0003A3288 /* MyMovieQuotesUITests */,
 			);
@@ -369,7 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A561893281A7CDF003A3288 /* ContentView.swift in Sources */,
+				2A561893281A7CDF003A3288 /* MovieLine.swift in Sources */,
 				2A5618D0281A7E54003A3288 /* MovieQuotePoster.swift in Sources */,
 				2A32609F281A8C4600B09A6B /* ModelData.swift in Sources */,
 				2A8F9DF8281E7C01005A8918 /* Extension.swift in Sources */,
@@ -408,12 +408,12 @@
 /* Begin PBXTargetDependency section */
 		2A56189F281A7CE0003A3288 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A56188C281A7CDF003A3288 /* MyMovieQuotes */;
+			target = 2A56188C281A7CDF003A3288 /* MovieLine */;
 			targetProxy = 2A56189E281A7CE0003A3288 /* PBXContainerItemProxy */;
 		};
 		2A5618A9281A7CE0003A3288 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A56188C281A7CDF003A3288 /* MyMovieQuotes */;
+			target = 2A56188C281A7CDF003A3288 /* MovieLine */;
 			targetProxy = 2A5618A8281A7CE0003A3288 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -677,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A5618B1281A7CE0003A3288 /* Build configuration list for PBXNativeTarget "MyMovieQuotes" */ = {
+		2A5618B1281A7CE0003A3288 /* Build configuration list for PBXNativeTarget "MovieLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A5618B2281A7CE0003A3288 /* Debug */,
