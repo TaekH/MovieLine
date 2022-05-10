@@ -9,44 +9,58 @@ import SwiftUI
 
 struct MovieList: View {
     
+    
     var moviePoster: [MovieInfo2]
+    
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
     var posterHeight: CGFloat { posterWidth * 1.5 }
-    
+
     @State var isPresented = false
-    @State var randomIndex = [0,1,2,3,4,5,6,7,8,9].shuffled()
-    //[1,3,5,0,..]
-    //@State var selectedIndex: Int
+    
+    //MARK: 중복 없는 랜덤 인자가 들어간 배열
+    func makeRandom()-> [Int] {
+        var randomArray = [Int]()
+        var number: Int
+        while randomArray.count < moviePoster.count {
+            number = Int.random(in: 0..<moviePoster.count)
+            if !randomArray.contains(number) {
+                randomArray.append(number)
+            }
+        }
+        return randomArray
+    }
+    
+    
+    
 
     var body: some View {
         var selectedIndex: Int = 0
+        let randomArray: [Int] = makeRandom()
         
         NavigationView {
             VStack {
-                //Divider()
                 ScrollView {
                     HStack(alignment: .top, spacing: 0) {
                         
                         LazyVStack(spacing: 0) {
                             
                             ForEach(0..<moviePoster.count / 2) { index in
-                                let randomPosterIndex = Int.random(in: 0...1)
+                                let randomPosterIndex = Bool.random()
                                 //randomPosterIndex 가 1이면 그냥 포스터
-                                if randomPosterIndex == 1 {
-                                    
-                                    MoviePoster(moviePoster: moviePoster[randomIndex[index]], posterWidth: posterWidth, posterHeight: posterHeight)
+                                if randomPosterIndex {
+                                    MoviePoster(moviePoster: moviePoster[randomArray[index]], posterWidth: posterWidth, posterHeight: posterHeight)
                                         .onTapGesture {
+                                            selectedIndex = index
                                             withAnimation {
-                                                selectedIndex = index
                                                 isPresented.toggle()
                                             }
                                         }
                                 }
                                 else {
-                                    MovieQuoteInList(moviePoster: moviePoster[randomIndex[index]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
+                                    MovieQuoteInList(moviePoster: moviePoster[randomArray[index]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
                                         .onTapGesture {
+                                            selectedIndex = index
                                             withAnimation {
-                                                selectedIndex = index
                                                 isPresented.toggle()
                                             }
                                         }
@@ -60,23 +74,22 @@ struct MovieList: View {
                         LazyVStack(spacing: 0) {
                             
                             ForEach(moviePoster.count / 2..<moviePoster.count) { index2 in
-                                let randomPosterIndex = Int.random(in: 0...1)
+                                let randomPosterIndex = Bool.random()
                                 
-                                if randomPosterIndex == 0 {
-                                    MoviePoster(moviePoster: moviePoster[randomIndex[index2]], posterWidth: posterWidth, posterHeight: posterHeight)
+                                if randomPosterIndex {
+                                    MoviePoster(moviePoster: moviePoster[randomArray[index2]], posterWidth: posterWidth, posterHeight: posterHeight)
                                         .onTapGesture {
                                             selectedIndex = index2
                                             withAnimation {
-                                                print(randomIndex[index2])
                                                 isPresented.toggle()
                                             }
                                         }
                                 }
                                 else {
-                                    MovieQuoteInList(moviePoster: moviePoster[randomIndex[index2]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
+                                    MovieQuoteInList(moviePoster: moviePoster[randomArray[index2]], posterWidth: posterWidth, posterHeight: CGFloat.random(in: posterWidth...300))
                                         .onTapGesture {
+                                            selectedIndex = index2
                                             withAnimation {
-                                                selectedIndex = index2
                                                 isPresented.toggle()
                                             }
                                         }
@@ -85,7 +98,7 @@ struct MovieList: View {
                         }
                     }
                     .fullScreenCover(isPresented: $isPresented) {
-                        MovieReview(movieInfo: moviePoster[randomIndex[selectedIndex]])
+                        MovieReview(movieInfo: moviePoster[randomArray[selectedIndex]])
                     }.padding(.horizontal, 10)
                 }
                 
