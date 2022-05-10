@@ -50,7 +50,7 @@ struct MovieQuote: View {
                             Button {
                                 currentIndex = index
                             } label: {
-                                MoviePoster(moviePoster: dummyMovie[index], posterWidth: posterWidth, posterHeight: posterHeight)
+                                MoviePoster(moviePoster: movieInfo[index], posterWidth: posterWidth, posterHeight: posterHeight)
                                     .padding(.trailing, 10)
                             }
                         }
