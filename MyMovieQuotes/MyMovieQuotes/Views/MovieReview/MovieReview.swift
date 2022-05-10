@@ -73,14 +73,24 @@ struct MovieReview: View {
                 
                 //MARK: 명대사, 별점, 글쓰기
                 HStack(alignment: .top) {
+                    
                     VStack(alignment: .leading) {
+                        
                         Text(movieInfo.title)
                             .fontWeight(.bold)
                             .font(.system(size: 25))
                             .padding(.all, 8)
+                        
                         HStack(spacing: 0) {
+                            
                             ForEach(0..<Int(movieInfo.starrating)) { index in
+                                
                                 Image(systemName: "star.fill")
+                                    .font(.system(size: 15))
+                                    .foregroundColor(Color("starRatingColor"))
+                                }
+                            if Int(ceil(movieInfo.starrating)) - Int(movieInfo.starrating) != 0 {
+                                Image(systemName: "star.leadinghalf.filled")
                                     .font(.system(size: 15))
                                     .foregroundColor(Color("starRatingColor"))
                             }
