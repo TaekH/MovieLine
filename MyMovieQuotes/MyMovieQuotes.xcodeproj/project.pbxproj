@@ -110,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				2A56188F281A7CDF003A3288 /* MyMovieQuotes */,
-				2A5618BD281A7D13003A3288 /* Views */,
 				2A5618BC281A7CFE003A3288 /* Resources */,
 				2A32609B281A8C0B00B09A6B /* Model */,
 				2A5618A0281A7CE0003A3288 /* MyMovieQuotesTests */,
@@ -132,10 +131,11 @@
 		2A56188F281A7CDF003A3288 /* MyMovieQuotes */ = {
 			isa = PBXGroup;
 			children = (
-				2A8F9DF6281E7BF4005A8918 /* Extension */,
 				2A561890281A7CDF003A3288 /* MyMovieQuotesApp.swift */,
 				2A561892281A7CDF003A3288 /* MovieLine.swift */,
 				2A561894281A7CE0003A3288 /* Assets.xcassets */,
+				2A5618BD281A7D13003A3288 /* Views */,
+				2A8F9DF6281E7BF4005A8918 /* Extension */,
 				2A561896281A7CE0003A3288 /* Preview Content */,
 			);
 			path = MyMovieQuotes;
@@ -186,11 +186,11 @@
 		2A5618BD281A7D13003A3288 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A5618C6281A7D85003A3288 /* MovieQuote */,
+				2A5618C7281A7D98003A3288 /* MovieList */,
+				2A5618D1281A7E70003A3288 /* MovieReview */,
 				2A6C0C8528239972006E9FAB /* WritingQuotes */,
 				2A5618BA281A7CE9003A3288 /* Components */,
-				2A5618D1281A7E70003A3288 /* MovieReview */,
-				2A5618C7281A7D98003A3288 /* MovieList */,
-				2A5618C6281A7D85003A3288 /* MovieQuote */,
 			);
 			path = Views;
 			sourceTree = "<group>";

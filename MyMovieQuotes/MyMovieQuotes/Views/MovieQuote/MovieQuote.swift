@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct MovieQuote: View {
-    //MARK: 다른 영화 포스터 사이즈
+    
+    /// 다른 컨텐츠 각 크기
     let posterWidth = UIScreen.main.bounds.width / 2.85
     let posterHeight = UIScreen.main.bounds.height / 4.13
     
-    @State var currentIndex: Int = 0 //선택한 다른 포스터 인덱스 저장 변수
+    @State var currentIndex: Int = 0 //선택한 다른 포스터 인덱스 저장
+    
     @State var isPresented = false
     
     //MARK: 현재시각 변수, 포메터 변수 (년,월,일 단위로 변경)
     @State var currentDate = Date()
-    
     var dateFormatter: DateFormatter {
-            let formatter = DateFormatter()
-            formatter.dateStyle = .long
-            return formatter
-        }
-    //
-    
-    
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }
     
     var body: some View {
         

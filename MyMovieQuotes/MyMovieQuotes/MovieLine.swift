@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct MovieLine: View {
-    //탭바 구분선 추가 (ios 15부터 디폴트로 구분선 삭제)
+    
     @State private var selection = 0
+    
+    
+    /// 탭바 구분선
     init() {
         UITabBar.appearance().scrollEdgeAppearance = .init()
     }

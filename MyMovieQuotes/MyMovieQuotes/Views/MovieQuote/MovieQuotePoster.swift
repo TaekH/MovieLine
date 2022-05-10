@@ -9,8 +9,11 @@ import SwiftUI
 
 struct MovieQuotePoste: View {
     var movieInfo: MovieInfo
+    
+    /// 명대사 포스터 크기
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
+    
     @State var quoteIndex = 0
     @State var isPresented = false
     
