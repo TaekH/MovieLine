@@ -10,7 +10,7 @@ import SwiftUI
 struct WritingQuote: View {
     
     @State var quote: String = ""
-    @Binding var quoteArray: MovieInfo2
+    @Binding var quoteArray: MovieInfo
     @Environment(\.presentationMode) var presentationMode
     func saveQuote() {
         if quoteAppropriate() {

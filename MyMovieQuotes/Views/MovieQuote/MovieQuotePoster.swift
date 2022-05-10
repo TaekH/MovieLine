@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieQuotePoste: View {
-    var movieInfo: MovieInfo2
+    var movieInfo: MovieInfo
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
     @State var quoteIndex = 0
@@ -50,10 +50,10 @@ struct MovieQuotePoste: View {
                 Button {
                     isPresented.toggle()
                 } label: {
-                    Text("영화 정보")
-                        .fontWeight(.bold)
+                    Text("영화정보")
+                        .fontWeight(.light)
                         .background(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("customBlueColor"), lineWidth: 2)
+                            .stroke(Color("customBlueColor"), lineWidth: 1)
                             .frame(width: 100, height: 30, alignment: .center)
                         )
                 }.foregroundColor(Color("customBlueColor"))
@@ -73,6 +73,6 @@ struct MovieQuotePoste: View {
 
 struct MovieQuotePoste_Previews: PreviewProvider {
     static var previews: some View {
-        MovieQuotePoste(movieInfo: dummyMovie[0], isPresented: false)
+        MovieQuotePoste(movieInfo: movieInfo[0], isPresented: false)
     }
 }

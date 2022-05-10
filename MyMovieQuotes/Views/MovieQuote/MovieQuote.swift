@@ -35,7 +35,7 @@ struct MovieQuote: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 //MARK: 메인 영화 포스터, 명대사 뷰 로드
-                MovieQuotePoste(movieInfo: dummyMovie[currentIndex], isPresented: isPresented)
+                MovieQuotePoste(movieInfo: movieInfo[currentIndex], isPresented: isPresented)
                 //MARK: 다른 영화 포스터 스크롤 뷰
                 Text("다른 콘텐츠")
                     .font(.system(size: 15))

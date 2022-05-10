@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieQuoteInList: View {
     
-    var moviePoster: MovieInfo2
+    var moviePoster: MovieInfo
     var posterWidth: CGFloat
     var posterHeight: CGFloat
     

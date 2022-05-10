@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MovieReview: View {
     
-    @State var movieInfo: MovieInfo2
+    @State var movieInfo: MovieInfo
+    
     @Environment(\.presentationMode) var presentationMode
+    
     @State var showWritingView: Bool = false
     @State var showQuote = false
     @State var quoteIndex = 0
@@ -117,13 +119,6 @@ struct MovieReview: View {
         .sheet(isPresented: $showWritingView, content: {
             WritingQuote(quoteArray: $movieInfo)})
         
-        //버튼 가려지지 않도록 상단 리니어 그라디언트 추가
-        //            Rectangle()
-        //                .fill(.black)
-        //                .opacity(0.7)
-        //                .mask(LinearGradient(gradient: Gradient(colors: [Color("customLightGrayColor"), .clear]), startPoint: .top, endPoint: .bottom))
-        //                .frame(width: g.size.width, height: 100)
-        
         
         //MARK: 창닫기 버튼
         Button {
@@ -146,6 +141,6 @@ struct MovieReview: View {
 
 struct MovieReview_Previews: PreviewProvider {
     static var previews: some View {
-        MovieReview(movieInfo: dummyMovie[0])
+        MovieReview(movieInfo: movieInfo[0])
     }
 }
