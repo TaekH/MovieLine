@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoviePoster: View {
-    var moviePoster: MovieInfo2
+    var moviePoster: MovieInfo
     var posterWidth: CGFloat
     var posterHeight: CGFloat
     

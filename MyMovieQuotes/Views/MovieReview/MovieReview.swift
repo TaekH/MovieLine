@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieReview: View {
     
-    @State var movieInfo: MovieInfo2
+    @State var movieInfo: MovieInfo
     @Environment(\.presentationMode) var presentationMode
     @State var showWritingView: Bool = false
     @State var showQuote = false
@@ -146,6 +146,6 @@ struct MovieReview: View {
 
 struct MovieReview_Previews: PreviewProvider {
     static var previews: some View {
-        MovieReview(movieInfo: dummyMovie[0])
+        MovieReview(movieInfo: movieInfo[0])
     }
 }

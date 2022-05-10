@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieQuotePoste: View {
-    var movieInfo: MovieInfo2
+    var movieInfo: MovieInfo
     var width:CGFloat = UIScreen.main.bounds.width
     var height:CGFloat = UIScreen.main.bounds.width * 1.25
     @State var quoteIndex = 0
@@ -73,6 +73,6 @@ struct MovieQuotePoste: View {
 
 struct MovieQuotePoste_Previews: PreviewProvider {
     static var previews: some View {
-        MovieQuotePoste(movieInfo: dummyMovie[0], isPresented: false)
+        MovieQuotePoste(movieInfo: movieInfo[0], isPresented: false)
     }
 }

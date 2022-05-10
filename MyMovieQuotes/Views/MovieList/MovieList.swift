@@ -10,7 +10,7 @@ import SwiftUI
 struct MovieList: View {
     
     
-    var moviePoster: [MovieInfo2]
+    var moviePoster: [MovieInfo]
     
     /// 리스트 안의 포스터 너비, 높이
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
@@ -113,6 +113,6 @@ struct MovieList: View {
 
 struct MovieList_Previews: PreviewProvider {
     static var previews: some View {
-        MovieList(moviePoster: dummyMovie)
+        MovieList(moviePoster: movieInfo)
     }
 }
