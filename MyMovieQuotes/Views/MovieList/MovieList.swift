@@ -12,9 +12,11 @@ struct MovieList: View {
     
     var moviePoster: [MovieInfo2]
     
+    /// 리스트 안의 포스터 너비, 높이
     let posterWidth = (UIScreen.main.bounds.width - 60) / 2
     var posterHeight: CGFloat { posterWidth * 1.5 }
-
+    
+    /// fullScreenCover 상태 변수
     @State var isPresented = false
     
     //MARK: 중복 없는 랜덤 인자가 들어간 배열
@@ -34,6 +36,7 @@ struct MovieList: View {
     
 
     var body: some View {
+        
         var selectedIndex: Int = 0
         let randomArray: [Int] = makeRandom()
         
