@@ -50,10 +50,10 @@ struct MovieQuotePoste: View {
                 Button {
                     isPresented.toggle()
                 } label: {
-                    Text("영화 정보")
-                        .fontWeight(.bold)
+                    Text("영화정보")
+                        .fontWeight(.light)
                         .background(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color("customBlueColor"), lineWidth: 2)
+                            .stroke(Color("customBlueColor"), lineWidth: 1)
                             .frame(width: 100, height: 30, alignment: .center)
                         )
                 }.foregroundColor(Color("customBlueColor"))
